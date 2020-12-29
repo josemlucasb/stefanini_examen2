@@ -49,7 +49,21 @@ public class RESTOrdenPagoService {
 	public Response getOrdenesPago() {
 		return Response.status(Response.Status.OK).entity(ordenPagoService.getOrdenesPago()).build();
 	}
+	
+	@GET
+	@Path("/find/{idOrdenPago}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getBancoById(@PathParam("idOrdenPago") Long idOrdenPago) {
+		return Response.status(Response.Status.OK).entity(ordenPagoService.getOrdenPagoById(idOrdenPago)).build();
+	}
 
+	/**
+	 * Listar todas las ordenes de pago de una sucursal contemplando el filtrado por tipo de moneda
+	 * 
+	 * @param idSucursal
+	 * @param moneda
+	 * @return
+	 */
 	@GET
 	@Path("/findBySucursalId/{idSucursal}")
 	@Produces(MediaType.APPLICATION_JSON)

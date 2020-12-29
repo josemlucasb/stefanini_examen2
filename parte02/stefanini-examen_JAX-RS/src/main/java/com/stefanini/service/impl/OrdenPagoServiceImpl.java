@@ -79,6 +79,11 @@ public class OrdenPagoServiceImpl implements OrdenPagoService {
 	}
 
 	@Override
+	public OrdenPago getOrdenPagoById(Long idOrdenPago) {
+		return ordenPagoRepository.findById(idOrdenPago).orElse(null);
+	}
+
+	@Override
 	public List<OrdenPago> getOrdenesByFiltros(Long idSucursal, String moneda) {
 		return ordenPagoRepository.findAllBySucursalIdSucursalAndMoneda(idSucursal, moneda);
 	}

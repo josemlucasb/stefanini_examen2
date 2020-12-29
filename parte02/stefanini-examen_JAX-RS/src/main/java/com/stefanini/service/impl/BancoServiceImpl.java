@@ -63,4 +63,9 @@ public class BancoServiceImpl implements BancoService {
 		return bancoRepository.findAll();
 	}
 
+	@Override
+	public Banco getBancoById(Long idBanco) {
+		return bancoRepository.findById(idBanco).orElse(null);
+	}
+
 }

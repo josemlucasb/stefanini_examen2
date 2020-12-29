@@ -47,15 +47,26 @@ public class RESTSucursalService {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getSucursales() {
-		System.out.println("--->1");
 		return Response.status(Response.Status.OK).entity(sucursalService.getSucursales()).build();
 	}
 
 	@GET
+	@Path("/find/{idSucursal}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getBancoById(@PathParam("idSucursal") Long idSucursal) {
+		return Response.status(Response.Status.OK).entity(sucursalService.getSucursalById(idSucursal)).build();
+	}
+
+	/**
+	 * Buscar todas las sucursales de acuerdo con un banco
+	 * 
+	 * @param idBanco
+	 * @return
+	 */
+	@GET
 	@Path("/findByBanco")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getSucursalesByIdBanco(@QueryParam("idBanco") Long idBanco) {
-		System.out.println("--->2: " + idBanco);
 		return Response.status(Response.Status.OK).entity(sucursalService.getSucursalByIdBanco(idBanco)).build();
 	}
 

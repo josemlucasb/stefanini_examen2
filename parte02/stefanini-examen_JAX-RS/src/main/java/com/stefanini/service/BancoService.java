@@ -15,4 +15,6 @@ public interface BancoService {
 
 	List<Banco> getBancos();
 
+	Banco getBancoById(Long idBanco);
+
 }

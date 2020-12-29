@@ -49,4 +49,11 @@ public class RESTBancoService {
 		return Response.status(Response.Status.OK).entity(bancoService.getBancos()).build();
 	}
 
+	@GET
+	@Path("/find/{idBanco}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getBancoById(@PathParam("idBanco") Long idBanco) {
+		return Response.status(Response.Status.OK).entity(bancoService.getBancoById(idBanco)).build();
+	}
+
 }

@@ -15,6 +15,8 @@ public interface OrdenPagoService {
 
 	List<OrdenPago> getOrdenesPago();
 
+	OrdenPago getOrdenPagoById(Long idOrdenPago);
+
 	List<OrdenPago> getOrdenesByFiltros(Long idSucursal, String moneda);
 
 }
