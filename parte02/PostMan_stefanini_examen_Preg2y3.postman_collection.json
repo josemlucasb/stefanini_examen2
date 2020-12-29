@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "839f1d2d-2932-4e2d-b0e1-2d2fa7202173",
+		"name": "Stefanini_examen_Preg2y3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ordenPago_findBySucursalId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/v1/examen/ordenpago/findBySucursalId/2?moneda=USD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"examen",
+						"ordenpago",
+						"findBySucursalId",
+						"2"
+					],
+					"query": [
+						{
+							"key": "moneda",
+							"value": "USD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sucursal_findByBancoId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/v1/examen/sucursal/findByBanco?idBanco=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"examen",
+						"sucursal",
+						"findByBanco"
+					],
+					"query": [
+						{
+							"key": "idBanco",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

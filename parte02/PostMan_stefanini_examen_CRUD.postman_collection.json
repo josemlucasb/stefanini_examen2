@@ -1,0 +1,423 @@
+{
+	"info": {
+		"_postman_id": "562efd34-88d5-413d-9aa1-a348032952a9",
+		"name": "Stefanini_examen_CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "banco_findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/v1/examen/banco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"examen",
+						"banco"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sucursal_findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/v1/examen/sucursal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"examen",
+						"sucursal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ordenPago_findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/v1/examen/ordenpago",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"examen",
+						"ordenpago"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "banco_create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"jose manuel\",\r\n    \"direccion\": \"av. prueba 123\",\r\n    \"fechaRegistro\": \"2020-12-10T10:09:08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/v1/examen/banco/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"examen",
+						"banco",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sucursal_create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idBanco\": 4,\r\n    \"nombre\": \"sucursal 10\",\r\n    \"direccion\": \"av. prueba 126\",\r\n    \"fechaRegistro\": \"2020-12-11T10:09:08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/v1/examen/sucursal/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"examen",
+						"sucursal",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ordenPago_create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idSucursal\": 1,\r\n    \"monto\": 100.0,\r\n    \"moneda\": \"PEN\",\r\n    \"estado\": 1,\r\n    \"fechaPago\": \"2020-12-11T10:09:08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/v1/examen/ordenpago/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"examen",
+						"ordenpago",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "banco_update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idBanco\": 16,\r\n    \"nombre\": \"prueba\",\r\n    \"direccion\": \"av. prueba 123\",\r\n    \"fechaRegistro\": \"2020-12-10T10:09:08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/v1/examen/banco/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"examen",
+						"banco",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sucursal_update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idSucursal\": 4,\r\n    \"nombre\": \"sucursal 11\",\r\n    \"direccion\": \"av. prueba 127\",\r\n    \"fechaRegistro\": \"2020-12-11T10:09:08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/v1/examen/sucursal/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"examen",
+						"sucursal",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ordenPago_update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idOrdenpago\": 7,\r\n    \"monto\": 80.0,\r\n    \"moneda\": \"USD\",\r\n    \"estado\": 1,\r\n    \"fechaPago\": \"2020-12-11T10:09:08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/v1/examen/ordenpago/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"examen",
+						"ordenpago",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "banco_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idBanco\": 16,\r\n    \"nombre\": \"prueba\",\r\n    \"direccion\": \"av. prueba 123\",\r\n    \"fechaRegistro\": \"2020-12-10T10:09:08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/v1/examen/banco/delete/16",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"examen",
+						"banco",
+						"delete",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sucursal_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idBanco\": 16,\r\n    \"nombre\": \"prueba\",\r\n    \"direccion\": \"av. prueba 123\",\r\n    \"fechaRegistro\": \"2020-12-10T10:09:08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/v1/examen/sucursal/delete/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"examen",
+						"sucursal",
+						"delete",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ordenPago_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idBanco\": 16,\r\n    \"nombre\": \"prueba\",\r\n    \"direccion\": \"av. prueba 123\",\r\n    \"fechaRegistro\": \"2020-12-10T10:09:08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/v1/examen/ordenpago/delete/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"examen",
+						"ordenpago",
+						"delete",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "banco_findById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/v1/examen/banco/find/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"examen",
+						"banco",
+						"find",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sucursal_findById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/v1/examen/sucursal/find/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"examen",
+						"sucursal",
+						"find",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ordenPago_findById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/v1/examen/ordenpago/find/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"examen",
+						"ordenpago",
+						"find",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
